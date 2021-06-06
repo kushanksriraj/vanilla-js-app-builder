@@ -1,0 +1,19 @@
+{
+  "name": "webpack-starter",
+  "version": "1.0.0",
+  "description": "A quick start package for your next vanillaJS App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kushanksriraj/webpack-starter.git"
+  },
+  "author": "Kushank Sriraj",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kushanksriraj/webpack-starter/issues"
+  },
+  "homepage": "https://github.com/kushanksriraj/webpack-starter#readme"
+}
