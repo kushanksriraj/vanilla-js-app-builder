@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "description": "A quick start package for your next vanillaJS App",
   "main": "index.js",
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "browserslist": "> 0.25%, not dead",
   "scripts": {
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,6 +24,9 @@
   },
   "homepage": "https://github.com/kushanksriraj/webpack-starter#readme",
   "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
+    "babel-loader": "^8.2.2",
     "webpack": "^5.38.1",
     "webpack-cli": "^4.7.0"
   }
