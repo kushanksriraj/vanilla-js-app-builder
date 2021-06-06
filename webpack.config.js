@@ -1,4 +1,5 @@
 const path = require("path");
+const HTMLWebpackPlugin = require("html-webpack-plugin");
 
 const webpackConfig = {
   entry: path.resolve(__dirname, "src", "index.js"),
@@ -6,6 +7,7 @@ const webpackConfig = {
   output: {
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),
+    clean: true,
   },
 
   module: {
@@ -26,11 +28,18 @@ const webpackConfig = {
       },
 
       {
-          test: /\.(png|svg|jpg|jpeg|gif)$/i,
-          type: "asset"
-      }
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset",
+      },
     ],
   },
+
+  plugins: [
+    new HTMLWebpackPlugin({
+      title: "vanillaJS App",
+      template: path.resolve(__dirname, "src", "index.html"),
+    }),
+  ],
 
   mode: "production",
 };
