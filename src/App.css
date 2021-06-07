@@ -5,3 +5,13 @@ h1 {
 h2 {
   color: orangered;
 }
+
+@media only screen and (min-width: 721px) {
+  h1 {
+    color: orangered;
+  }
+
+  h2 {
+    color: royalblue;
+  }
+}
