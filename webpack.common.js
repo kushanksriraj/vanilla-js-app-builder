@@ -1,5 +1,6 @@
 const path = require("path");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
+const user = require("./user.config");
 
 const webpackConfig = {
   entry: path.resolve(__dirname, "src", "index.js"),
@@ -36,7 +37,7 @@ const webpackConfig = {
 
   plugins: [
     new HTMLWebpackPlugin({
-      title: "vanillaJS App",
+      title: user.title,
       template: path.resolve(__dirname, "src", "index.html"),
     }),
   ],
@@ -53,13 +54,6 @@ const webpackConfig = {
       },
     },
   },
-
-  devtool: "inline-source-map",
-  devServer: {
-    contentBase: "./dist",
-  },
-
-  mode: "production",
 };
 
 module.exports = webpackConfig;

@@ -1,7 +1,7 @@
 import Logo from "./logo.svg";
 
 const root = document.getElementById("root");
-const name = "Kushank";
+var name = "Kushank";
 let route;
 
 function init() {
