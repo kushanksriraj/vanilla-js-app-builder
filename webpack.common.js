@@ -1,6 +1,7 @@
 const path = require("path");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const ESLintPlugin = require("eslint-webpack-plugin");
+const Dotenv = require("dotenv-webpack");
 const user = require("./user.config");
 
 const webpackConfig = {
@@ -44,6 +45,7 @@ const webpackConfig = {
     new ESLintPlugin({
       files: "src/**/*.js",
     }),
+    new Dotenv(),
   ],
 
   optimization: {

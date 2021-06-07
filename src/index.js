@@ -1,5 +1,5 @@
 import Logo from "./logo.svg";
-
+console.log(process.env.SECRET_KEY)
 const root = document.getElementById("root");
 var name = "Kushank";
 let route;
