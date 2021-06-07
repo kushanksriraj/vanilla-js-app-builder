@@ -1,5 +1,6 @@
 const path = require("path");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
+const ESLintPlugin = require("eslint-webpack-plugin");
 const user = require("./user.config");
 
 const webpackConfig = {
@@ -39,6 +40,9 @@ const webpackConfig = {
     new HTMLWebpackPlugin({
       title: user.title,
       template: path.resolve(__dirname, "src", "index.html"),
+    }),
+    new ESLintPlugin({
+      files: "src/**/*.js",
     }),
   ],
 

@@ -30,7 +30,7 @@ function hideLoader(root, loader) {
   root.removeChild(loader);
 }
 
-function showAboutPage(event) {
+function showAboutPage() {
   const loader = showLoader(root);
 
   import(/* webpackPrefetch: true */ "./App").then(({ default: App }) => {
@@ -39,7 +39,7 @@ function showAboutPage(event) {
   });
 }
 
-function showContactPage(event) {
+function showContactPage() {
   const loader = showLoader(root);
 
   import(/* webpackPrefetch: true */ "./Contact").then(
