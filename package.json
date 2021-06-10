@@ -1,5 +1,5 @@
 {
-  "name": "webpack-starter",
+  "name": "vanilla-js-app",
   "version": "1.0.0",
   "description": "A quick start package for your next vanillaJS App",
   "main": "index.js",
@@ -14,16 +14,7 @@
     "build": "webpack --config webpack.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kushanksriraj/webpack-starter.git"
-  },
-  "author": "Kushank Sriraj",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/kushanksriraj/webpack-starter/issues"
-  },
-  "homepage": "https://github.com/kushanksriraj/webpack-starter#readme",
   "devDependencies": {
     "@babel/core": "^7.14.3",
     "@babel/preset-env": "^7.14.4",
