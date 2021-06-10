@@ -1,22 +1,35 @@
-import Logo from "./logo.svg";
-console.log(process.env.SECRET_KEY)
+import "./index.css";
+import githubLogo from "./githubLogo.png";
 const root = document.getElementById("root");
-var name = "Kushank";
 let route;
 
 function init() {
-  root.innerHTML = /*html*/ `
-        <img src="${Logo}" alt="build icon" />
-        <h1>vanillaJS app Builder</h1>
-        <nav>
-          <button id="about">About</button>
-          <button id="contact">Contact</button>
-        </nav>
-        <div id="route"></div>`;
+  const content = `
+    <nav class="nav">
+      <header class="nav__header">vanillaJS App Builder</header>
+      <div class="git-logo">
+        <a href="https://github.com/kushanksriraj/webpack-starter/tree/development" target="_blank" rel="noopener noreferrer">
+          <img src="${githubLogo}" alt="GitHub" />
+        </a>
+      </div>
+    </nav>
+    <div class="logo">
+      <div class="material-icons-outlined">
+         build_circle
+      </div>
+    </div>
+    <div class="example">
+      <p>Start editing files in <code><strong>src</strong></code> folder to see magic happen...</p>
+      <button class="example__btn" id="counter-show-btn">Counter example</button>
+    </div>
+    <div class="route" id="route"></div>
+  `;
 
+  root.innerHTML = content;
   route = document.querySelector("#route");
-  document.querySelector("#about").addEventListener("click", showAboutPage);
-  document.querySelector("#contact").addEventListener("click", showContactPage);
+  document
+    .querySelector("#counter-show-btn")
+    .addEventListener("click", showCounterApp);
 }
 
 function showLoader(root) {
@@ -30,24 +43,14 @@ function hideLoader(root, loader) {
   root.removeChild(loader);
 }
 
-function showAboutPage() {
+function showCounterApp() {
   const loader = showLoader(root);
 
-  import(/* webpackPrefetch: true */ "./App").then(({ default: App }) => {
+  import(/* webpackPrefetch: true */ "./App").then(({ App, appFunctions }) => {
     hideLoader(root, loader);
-    route.innerHTML = App({ name });
+    route.innerHTML = App();
+    appFunctions();
   });
-}
-
-function showContactPage() {
-  const loader = showLoader(root);
-
-  import(/* webpackPrefetch: true */ "./Contact").then(
-    ({ default: Contact }) => {
-      hideLoader(root, loader);
-      route.innerHTML = Contact();
-    }
-  );
 }
 
 init();

@@ -1,17 +1,60 @@
-h1 {
-  color: royalblue;
+/* Mobile */
+.app {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-h2 {
-  color: orangered;
+.counter__value {
+  font-size: 2rem;
+  border: 1px solid grey;
+  padding: 0 0.25rem;
 }
 
+.btn__wrap {
+  margin-top: 1rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+  width: 18rem;
+}
+
+.ui__btn {
+  display: flex;
+  align-items: center;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.ui__btn:active {
+  border: 1px solid grey;
+}
+
+.ui__btn:focus {
+  border: 1px solid grey;
+}
+
+.ui__btn-text {
+  padding: 0.15rem 0.25rem;
+}
+
+.ui__btn-icon {
+  background-color: black;
+  padding: 0 0.25rem;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.ui__btn-icon > span {
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* Override style for Desktop */
 @media only screen and (min-width: 721px) {
-  h1 {
-    color: orangered;
-  }
-
-  h2 {
-    color: royalblue;
-  }
 }

@@ -39,8 +39,5 @@
     "webpack-cli": "^4.7.0",
     "webpack-dev-server": "^3.11.2",
     "webpack-merge": "^5.8.0"
-  },
-  "dependencies": {
-    "lodash": "^4.17.21"
   }
 }
